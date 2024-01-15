@@ -1,0 +1,321 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #e0e0e0;
+	color: #1d1d1d;
+}
+
+main{
+	position: relative;
+}
+
+.contenedor,.contenedorN,.contenedorU{
+	position: absolute;
+	padding-top: 100px;
+	left: 18%;
+	width: 90%;
+	max-width: 1000px;
+	margin: 50px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+}
+
+
+
+.contenedor .pelicula,.contenedorN .pelicula, .contenedorU .pelicula {
+	text-align: center;
+}
+
+.contenedor .pelicula .titulo,.contenedorN .pelicula .titulo,.contenedorU .pelicula .titulo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor .pelicula .poster,.contenedorN .pelicula .poster, .contenedorU .pelicula .poster {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.paginacion {
+	position: fixed;
+	bottom: 0;
+	background: #100a1f;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: #241744;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+	background: #137c32;
+}
+
+
+
+
+
+
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	display: none;
+}
+
+.detalle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, #8e44ad, #e67e22);
+    opacity: 0.99;
+	display: flex;
+	align-items: left;
+	justify-content: center;
+	z-index: 1;
+	display: none; 
+}
+
+.peliculaDetalle {
+	margin-left: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.peliculaDetalle img{
+	margin: auto;
+	max-height: 400px;
+	animation: aparicion 1.5s linear;
+}
+
+@keyframes aparicion {
+	0%{
+		transform: translateY(-2000px);
+	}
+
+	50%{
+		transform: translateY(100px);
+
+	}
+
+	100%{
+		transform: translateY(0);
+
+	}
+}
+
+
+
+.peliculaDetalle .tituloDetalle{
+	margin: auto;
+	font-size: 40px;
+}
+
+.peliculaDetalle button{
+
+	max-width: 120px;
+	background-color: green;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 15px 5px;
+	cursor: pointer;
+}
+
+.botonCarrito{
+	position: absolute;
+	margin-top: 40px;
+	margin-left: 90px;
+}
+
+.flotaBotones{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 50px;
+}
+
+.descripcionDetalle{
+	max-height: 110px;
+	overflow-y: scroll;
+}
+
+.nombreUsuario{
+	padding-right: 40px;
+}
+
+
+.fijo,.fijoN,.fijoU{
+	padding: 20px;
+	background-color: beige;
+	z-index: 1;
+	list-style: none;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	align-items: center;
+}
+
+.fijo a,.fijoN a,.fijoU a{
+	text-decoration: none;
+	color: black;
+}
+
+li:first-child{
+	font-size: 25px;
+	color: brown;
+}
+
+.fijo button,.fijoN button,.fijoU button{
+	margin-right: 35%;
+    background-color: green;
+    text-transform: uppercase;
+    color: wheat;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contenedorCarrito{
+
+	margin-top: 100px;
+	margin-left: 100px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.contenedorCarrito button{
+	margin-right: 10px;
+	font-size: 15px;
+}
+
+#lugar{
+	width: 600px;
+}
+
+.carritoTarjeta{
+	max-width: 700px;
+
+	background: linear-gradient(to bottom, #8e44ad, #e67e22);
+	padding: 10px;
+}
+
+.carritoTarjeta img{
+	max-width: 200px;
+}
+
+.carritoTarjeta button{
+	margin: 5px;
+	margin-left: 40px;
+	padding: 10px;
+	border: 2px green solid;
+	background-color: rgba(221, 230, 46, 0.867);
+	font-size: 16px;
+	cursor: pointer;
+
+}
+
+.botonVaciar{
+	border-radius: 10px;
+	display: block;
+	margin-top: 100px;
+	margin-bottom: 10px;
+	margin-left: 40%;
+	padding: 20px;
+	font-size: 20px;
+	background-color: rgba(79, 19, 19, 0.612);
+	color: white;
+	font-weight: bold;
+}
+
+
+.botonComprar{
+	border-radius: 10px;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	margin-left: 40%;
+	padding: 20px;
+	font-size: 20px;
+	background-color: green;
+	color: white;
+	font-weight: bold;
+}
+
+
+
+.pelicula{
+	opacity: 0.75;
+
+}
+.pelicula:hover{
+	opacity: 1;
+}
+
+.pelicula button{
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: orange;
+	border: 3px solid purple;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+
+}
+
+
+
+footer{
+	width: 100%;
+	background-color: #100a1f;
+	color: white;
+	height: 30px;
+	position: fixed;
+	z-index: 21;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer p{
+	padding-left: 100px;
+}
+

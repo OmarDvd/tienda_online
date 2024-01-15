@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="estilos.css">
+	<title>Videoclub El de siempre</title>
+
+</head>
+
+<body>
+
+
+
+
+	<div class="fixed" id="loader">Cargando...</div>
+
+	<header>
+		<ul class="fijo">
+			<li class="nombreUsuario"></li>
+			<li>
+				<a href="javascript:void(0);" onclick="ordenarMasPopulares()">Ordenar por más populares</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);" onclick="ordenarMenosPopulares()">Ordenar por menos populares</a>
+			</li>
+			<a href="javascript:void(0);" onclick="ordenarProximosEstrenos()">Ordenar por próximos estrenos</a>
+			<li>
+				<h1 id="lugar">Peliculas más populares</h1>
+			</li>
+			<li class="carrito"><button type="button" class="botonCarritoUL" onclick="vercarrito()">Carrito: 0</button></li>
+		</ul>
+		<h1>a</h1>
+	</header>
+
+<main>
+	<div class="contenedor" id="contenedor"></div>
+	<div class="contenedorU" id="contenedorU"></div>
+    <div class="contenedorN" id="contenedorN"></div>
+</main>
+
+	<footer>
+		<p>
+			Videoclub <i>El de siempre </i>&copy; Copyright. Todos los derechos reservados. <p>omarescamez@gmail.com</p>
+		</p>
+		
+	</footer>
+
+	<script  src="comprobarAcceso.js"></script>
+
+	<script src="populares.js"></script>
+
+	<script src="detalle.js"></script>
+	<script src="carrito.js"></script>
+
+
+
+</body>
+
+</html>

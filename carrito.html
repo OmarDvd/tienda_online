@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<!--Necesario para usar emailjs-->
+	<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!--Credenciales de mi usuario para usar emailjs-->
+  <script type="text/javascript">
+	emailjs.init('FYxPv7LF7c8KXRKAR')
+  </script>
+
+	<link rel="stylesheet" href="estilos.css">
+	<title>Compra</title>
+</head>
+<body>
+
+
+	<header>
+		<ul class="fijoN">
+			<li class="nombreUsuario"></li>
+
+			<li>
+				<a href="popular.html">Volver a ver las películas disponibles</a>
+			</li>
+			<li>
+				<h1>Contenido carrito</h1>
+			</li>
+			<li class="carrito"><button type="button" class="botonCarritoUL" onclick="vercarrito()">Carrito: 0</button></li>
+
+		</ul>
+		<h1>a</h1>
+	</header>
+    <div class="contenedorCarrito">
+
+    </div>
+
+	<footer>
+		<p>
+			Videoclub <i>El de siempre </i>&copy; Copyright. Todos los derechos reservados. <p>omarescamez@gmail.com</p>
+		</p>
+		
+	</footer>
+    <script  src="comprobarAcceso.js"></script>
+    <script src="carrito.js"></script>
+	<script src="comprar.js"></script>
+    <script src="verCarrito.js"></script>
+	
+
+
+</body>
+</html>
