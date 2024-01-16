@@ -42,12 +42,11 @@ function validar() {
 
                 window.location.href = 'popular.html';
             } else {
-                alert("usuario o contraseña incorrectos")
+                alert("usuario o contraseña incorrectos");
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert("usuario o contraseña incorrectos");
         });
 }
 
